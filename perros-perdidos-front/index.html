@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscando a tu perro</title>
+    <!-- BOOTSTRAP CDN -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/loader.css">
+    <link
+      rel="icon"
+      href="https://images.emojiterra.com/openmoji/v12.2/512px/1f436.png"
+    />
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/764c90c9d0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- pre-loader -->
+    <div class="loader-page"></div>
+
+    <!-- NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Logo de inicio -->
+      <a class="navbar-brand" href="index.html"><img class="w-25 h-25" src="https://images.emojiterra.com/openmoji/v12.2/512px/1f436.png" alt="Lost dogs"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="dogs-lost.html"
+                >Perros perdidos<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dogs-profile.html">Mis Publicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dogs-found.html">Reencuentros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.html">Subir busqueda</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="contact.html"
+                tabindex="-1"
+                aria-disabled="true"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item usuario-sin-iniciar">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="modal"
+                data-target="#sesionModal"
+                >Inicio Sesion</a
+              >
+            </li>
+            <li class="nav-item usuario-sin-iniciar">
+              <a
+                href="#"
+                class="nav-link"
+                data-toggle="modal"
+                data-target="#registroModal"
+                >Registrarse</a
+              >
+            </li>
+            <li class="nav-item usuario-dentro hide">
+              <a href="#" class="nav-link" id="cerrar-sesion">Cerrar Sesion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bienvenida -->
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-6 offset-md-3" id="bienvenida"></div>
+      </div>
+    </div>
+
+    <!-- MODAL REGISTRO-->
+    <div
+      class="modal fade"
+      id="registroModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="registro-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name=""
+                  id="registro-email"
+                  class="form-control"
+                  placeholder="usuario@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="password"
+                  id="registro-clave"
+                  class="form-control"
+                  placeholder="*******"
+                  minlength="8"
+                  required
+                />
+                <div class="help-block">Mínimo 8 caracteres</div>
+              </div>
+              <button type="submit" class="btn btn-primary">Registro</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL INICIO SESION -->
+    <div
+      class="modal fade"
+      id="sesionModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" id="sesion-form">
+              <div class="form-group">
+                <label class="control-label">Email</label>
+                <input
+                  type="email"
+                  name=""
+                  id="sesion-email"
+                  class="form-control"
+                  placeholder="usuario@email.com"
+                  required
+                />
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <label class="control-label">Password</label>
+                <input
+                  type="password"
+                  id="sesion-clave"
+                  class="form-control"
+                  placeholder="*****"
+                  minlength="8"
+                  required
+                />
+                <div class="help-block">Mínimo 8 caracteres</div>
+              </div>
+
+              <button type="submit" class="btn btn-secondary btn-block">
+                Iniciar Sesión
+              </button>
+              <button
+                type="submit"
+                class="btn btn-danger btn-block"
+                id="googleSesion"
+              >
+                Iniciar con Google
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container p-5">
+      <h1 class="text-center text-dark bg-light font-weight-bold display-4 border border-whites rounded font-italic">
+        Bienvenido/a a Perros Perdidos
+      </h1>
+      <p class="text-center text-dark bg-light font-weight-bold display-4 border border-whites rounded font-italic">Hasta que no hayas amado a un animal, una parte de tu alma estará dormida</p>
+    </main>
+
+    <!-- Bootstrap Scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Alertas modals JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- FIREBASE SCRIPTS -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAQG2KmpEWlC6pVZWIxqcHAgDBfFTg118c",
+        authDomain: "perros-perdidos-ee9e0.firebaseapp.com",
+        projectId: "perros-perdidos-ee9e0",
+        storageBucket: "perros-perdidos-ee9e0.appspot.com",
+        messagingSenderId: "792911847050",
+        appId: "1:792911847050:web:0129a375cdc11430d61773",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+    </script>
+
+    <!-- CUSTOM CODE -->
+    <script src="js/firebase.js"></script>
+    <script src="js/bienvenida.js"></script>
+  </body>
+</html>

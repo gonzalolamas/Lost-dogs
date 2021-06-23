@@ -1,0 +1,35 @@
+{
+  "name": "proyecto-node-express-ong",
+  "version": "1.0.0",
+  "description": "modulos nodemon, express",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm install",
+    "dev": "nodemon server",
+    "server": "nodemon server"
+  },
+  "keywords": [
+    "npm",
+    "express",
+    "node"
+  ],
+  "author": "Gonzalo Lamas",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^5.11.19",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.5.0",
+    "nodemon": "^2.0.7",
+    "npm": "^7.6.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^11.2.0"
+  }
+}

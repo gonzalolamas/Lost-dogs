@@ -1,0 +1,37 @@
+* {
+  font-size: 1.1rem;
+}
+body,
+html {
+  background-image: url(../img/perro-imagen-de-fondo-2.jpg);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-repeat: repeat;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+.hide {
+  display: none;
+}
+
+.enlace {
+  display: inline;
+  border: 2px solid green;
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.enlace:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  top: 330px;
+}
