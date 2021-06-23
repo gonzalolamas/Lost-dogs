@@ -30,15 +30,8 @@ y luego ejecutar node server.js en la terminal
 # Autor ✍
 -  Gonzalo Lamas ([LinkedIn](https://www.linkedin.com/in/gonzalo-lamas/)).
 
-# Notas 📝
+# Nota 📝
 -  Este proyecto lo fui realizando con sus respectivos features en [GitLab](https://gitlab.com/gonzalolamas/perros-perdidos-final).
 
 # Agradecimientos 🙌
 -  Al equipo de Comunidad IT por darme la oportunidad de hacer este curso 🤓
-
-
-
-
-
-
-
