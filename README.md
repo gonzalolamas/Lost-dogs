@@ -1,5 +1,7 @@
 # Lost-dogs 🐾🐕
 
+![image](https://user-images.githubusercontent.com/68254067/124497377-2541d580-dd91-11eb-8320-0db4499ee217.png)
+
 El proyecto tiene dos carpetas, una pertenece al Frontend y la otra al Backend. Se puede loguear con usuarios distintos, publicar y eliminar.
 
 El sitio fue pensado para personas que perdieron a sus perros, y puedan iniciar una busquéda en la página.
